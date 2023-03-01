@@ -17,7 +17,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     background-color: #252533;
 
 }
@@ -26,4 +25,5 @@ body{
     align-items: center;
     justify-content: center;
     flex-flow: column wrap;
+    width: 100%;
 }

@@ -1,22 +1,39 @@
 import React ,{useState} from 'react';
 import './App.css';
-import Icon from 'react-icons-kit';
-import Qustion from './question';
-import data from './data';
+import data, { links, soials } from './data';
+import {AiOutlineMenu}from 'react-icons/ai';
 
 function App() {
-  const [question , setQusetion]  = useState(data);
-  return (
-       <>
-       <div className='box'>
-         <h1>سوالی پیش اومده؟</h1>
-         {
-          question.map((index)=>{
-            return <Qustion key={index.id} {...index}/>
-          })
-         }
-       </div>
-       </>
+  return (<>
+       <nav className='nav'>
+        <div className='open'><button><AiOutlineMenu color='#00ffffae' fontSize='20px'/></button></div>
+
+         <div className='menu'>
+          <ul>
+            {links.map((link)=>{
+              const {id,url,text}=link;
+              return <li key={id}><a href={url}>{text}</a></li>
+            })}
+          </ul>
+         </div>
+         <div className='ICONS'>
+          <ul>
+            {soials.map((iconlink)=>{
+              const {id,url,icon} = iconlink;
+              return <li key={id}><a href={url}>{icon}</a></li>  
+            })}
+          </ul>
+         </div>
+       </nav>
+               <div className='menu1'>
+               <ul>
+                   {links.map((link)=>{
+                     const {id,url,text}=link;
+                     return <li key={id}><a href={url}>{text}</a></li>
+                   })}
+                 </ul>
+               </div>
+               </>
 
   );
 }

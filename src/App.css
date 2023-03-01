@@ -1,3 +1,88 @@
 h1{
   color: #00ffffae;
 }
+
+.nav{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 2px solid #00ffff25;
+}
+.nav .menu ul, .nav .ICONS ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 500px;
+  margin: 30px 0;
+}
+.nav .ICONS ul{
+  width: 100px;
+}
+
+a{
+  color: #00ffffae;
+  text-decoration: none;
+}
+.iconss{
+  font-size: 20px;
+  margin: 0 5px;
+}
+.open{
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+button{
+  border: none;
+  color: #00ffffae;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #ffffff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 40px;
+}
+.menu1{
+  opacity: 0;
+  display: none;
+  visibility: hidden;
+}
+@media screen and (max-width:767px){
+  .open{
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  .menu{
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .nav{
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  .menu1{
+    opacity: 1;
+    display: block;
+    visibility: visible;
+    width: 100%;
+    background-color: #00ffff19;
+  }
+  .menu1 ul{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-flow: column wrap;
+    padding: 0 30px;
+    list-style: none;
+    margin: 20px 0;
+  }
+  .menu1 ul li{
+    margin: 20px;
+  }
+}

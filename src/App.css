@@ -47,9 +47,11 @@ button{
   height: 40px;
 }
 .menu1{
-  opacity: 0;
-  display: none;
-  visibility: hidden;
+  transition: 0.3s all;
+    width: 100%;
+    background-color: #00ffff19;
+    height: 0;
+    overflow: hidden;
 }
 @media screen and (max-width:767px){
   .open{
@@ -67,11 +69,13 @@ button{
     padding: 0 30px;
   }
   .menu1{
-    opacity: 1;
-    display: block;
-    visibility: visible;
     width: 100%;
     background-color: #00ffff19;
+    height: 0;
+    overflow: hidden;
+  }
+  .active{
+    height: 300px;
   }
   .menu1 ul{
     display: flex;
